@@ -1,0 +1,129 @@
+Command being timed: "./main"
+        User time (seconds): 0.00
+        System time (seconds): 0.00
+        Percent of CPU this job got: 80%
+        Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+        Average shared text size (kbytes): 0
+        Average unshared data size (kbytes): 0
+        Average stack size (kbytes): 0
+        Average total size (kbytes): 0
+        Maximum resident set size (kbytes): 3456
+        Average resident set size (kbytes): 0
+        Major (requiring I/O) page faults: 1
+        Minor (reclaiming a frame) page faults: 135
+        Voluntary context switches: 2
+        Involuntary context switches: 0
+        Swaps: 0
+        File system inputs: 136
+        File system outputs: 0
+        Socket messages sent: 0
+        Socket messages received: 0
+        Signals delivered: 0
+        Page size (bytes): 4096
+        Exit status: 0
+
+
+ Command being timed: "./optimization"
+        User time (seconds): 0.00
+        System time (seconds): 0.00
+        Percent of CPU this job got: 50%
+        Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+        Average shared text size (kbytes): 0
+        Average unshared data size (kbytes): 0
+        Average stack size (kbytes): 0
+        Average total size (kbytes): 0
+        Maximum resident set size (kbytes): 3328
+        Average resident set size (kbytes): 0
+        Major (requiring I/O) page faults: 5
+        Minor (reclaiming a frame) page faults: 135
+        Voluntary context switches: 5
+        Involuntary context switches: 0
+        Swaps: 0
+        File system inputs: 264
+        File system outputs: 0
+        Socket messages sent: 0
+        Socket messages received: 0
+        Signals delivered: 0
+        Page size (bytes): 4096
+        Exit status: 0
+
+
+
+Performance counter stats for './main':
+
+              2,97 msec task-clock                       #    0,731 CPUs utilized
+                 2      context-switches                 #  673,774 /sec
+                 0      cpu-migrations                   #    0,000 /sec
+               124      page-faults                      #   41,774 K/sec
+   <not supported>      cycles
+   <not supported>      instructions
+   <not supported>      branches
+   <not supported>      branch-misses
+   <not supported>      L1-dcache-loads
+   <not supported>      L1-dcache-load-misses
+   <not supported>      LLC-loads
+   <not supported>      LLC-load-misses
+
+       0,004061407 seconds time elapsed
+
+       0,000000000 seconds user
+       0,003671000 seconds sys
+
+
+
+
+Performance counter stats for './optimization':
+
+              2,62 msec task-clock                       #    0,810 CPUs utilized
+                 0      context-switches                 #    0,000 /sec
+                 0      cpu-migrations                   #    0,000 /sec
+               125      page-faults                      #   47,648 K/sec
+   <not supported>      cycles
+   <not supported>      instructions
+   <not supported>      branches
+   <not supported>      branch-misses
+   <not supported>      L1-dcache-loads
+   <not supported>      L1-dcache-load-misses
+   <not supported>      LLC-loads
+   <not supported>      LLC-load-misses
+
+       0,003236832 seconds time elapsed
+
+       0,003378000 seconds user
+       0,000000000 seconds sys
+
+
+Samples: 39  of event 'cpu-clock:pppH', Event count (approx.): 9750000
+Overhead  Command  Shared Object         Symbol
+  15,38%  main     ld-linux-x86-64.so.2  [.] intel_check_word.constprop.0                                                                                                                                                                     ▒
+  12,82%  main     ld-linux-x86-64.so.2  [.] handle_intel.constprop.0                                                                                                                                                                         ▒
+   7,69%  main     [unknown]             [k] 0xffffffff96aadc71                                                                                                                                                                               ▒
+   7,69%  main     [unknown]             [k] 0xffffffff96aaf26e                                                                                                                                                                               ◆
+   5,13%  main     ld-linux-x86-64.so.2  [.] get_common_cache_info.constprop.0                                                                                                                                                                ▒
+   5,13%  main     [unknown]             [k] 0xffffffff95ac917e                                                                                                                                                                               ▒
+   5,13%  main     [unknown]             [k] 0xffffffffc083fee9                                                                                                                                                                               ▒
+   2,56%  main     ld-linux-x86-64.so.2  [.] _dl_map_object_from_fd                                                                                                                                                                           ▒
+   2,56%  main     ld-linux-x86-64.so.2  [.] _dl_relocate_object                                                                                                                                                                              ▒
+   2,56%  main     ld-linux-x86-64.so.2  [.] do_lookup_x                                                                                                                                                                                      ▒
+   2,56%  main     ld-linux-x86-64.so.2  [.] get_common_indices.constprop.0                                                                                                                                                                   ▒
+   2,56%  main     ld-linux-x86-64.so.2  [.] init_cpu_features.constprop.0                                                                                                                                                                    ▒
+   2,56%  main     libc.so.6             [.] _int_malloc                                                                                                                                                                                      ▒
+   2,56%  main     [unknown]             [k] 0xffffffff95b125c8                                                                                                                                                                               ▒
+   2,56%  main     [unknown]             [k] 0xffffffff95b34b0a                                                                                                                                                                               ▒
+   2,56%  main     [unknown]             [k] 0xffffffff95bc5881                                                                                                                                                                               ▒
+   2,56%  main     [unknown]             [k] 0xffffffff95d3b845                                                                                                                                                                               ▒
+   2,56%  main     [unknown]             [k] 0xffffffff95d5fc94                                                                                                                                                                               ▒
+   2,56%  main     [unknown]             [k] 0xffffffff95d97e1d                                                                                                                                                                               ▒
+   2,56%  main     [unknown]             [k] 0xffffffff95e30959                                                                                                                                                                               ▒
+   2,56%  main     [unknown]             [k] 0xffffffff960667f6                                                                                                                                                                               ▒
+   2,56%  main     [unknown]             [k] 0xffffffff96129620                                                                                                                                                                               ▒
+   2,56%  main     [unknown]             [k] 0xffffffff96274ca4
+
+
+Samples: 13  of event 'cpu-clock:pppH', Event count (approx.): 3250000
+Overhead  Command       Shared Object         Symbol
+  69,23%  optimization  [unknown]             [k] 0xffffffff95b34b0a                                                                                                                                                                          ▒
+   7,69%  optimization  ld-linux-x86-64.so.2  [.] intel_check_word.constprop.0                                                                                                                                                                ▒
+   7,69%  optimization  [unknown]             [k] 0xffffffff95aa959a                                                                                                                                                                          ▒
+   7,69%  optimization  [unknown]             [k] 0xffffffff95dbeef6                                                                                                                                                                          ▒
+   7,69%  optimization  [unknown]             [k] 0xffffffff960d3b58
