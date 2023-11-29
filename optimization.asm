@@ -14,7 +14,7 @@ GeometricalProg(int):
         addl    %eax, -4(%rbp)
         addl    $1, -8(%rbp)
 .L2:
-        cmpl    $99, -8(%rbp)
+        cmpl    $9999, -8(%rbp)
         jle     .L3
         movl    -4(%rbp), %eax
         addq    $16, %rsp

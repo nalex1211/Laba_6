@@ -1,20 +1,20 @@
-Command being timed: "./main"
-        User time (seconds): 0.00
-        System time (seconds): 0.00
-        Percent of CPU this job got: 80%
-        Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+ Command being timed: "./main"
+        User time (seconds): 2.28
+        System time (seconds): 1.80
+        Percent of CPU this job got: 68%
+        Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.95
         Average shared text size (kbytes): 0
         Average unshared data size (kbytes): 0
         Average stack size (kbytes): 0
         Average total size (kbytes): 0
-        Maximum resident set size (kbytes): 3456
+        Maximum resident set size (kbytes): 3200
         Average resident set size (kbytes): 0
-        Major (requiring I/O) page faults: 1
-        Minor (reclaiming a frame) page faults: 135
-        Voluntary context switches: 2
-        Involuntary context switches: 0
+        Major (requiring I/O) page faults: 27
+        Minor (reclaiming a frame) page faults: 124
+        Voluntary context switches: 99
+        Involuntary context switches: 3024
         Swaps: 0
-        File system inputs: 136
+        File system inputs: 3848
         File system outputs: 0
         Socket messages sent: 0
         Socket messages received: 0
@@ -23,38 +23,37 @@ Command being timed: "./main"
         Exit status: 0
 
 
- Command being timed: "./optimization"
-        User time (seconds): 0.00
-        System time (seconds): 0.00
-        Percent of CPU this job got: 50%
-        Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.00
+Command being timed: "./optimization"
+        User time (seconds): 1.22
+        System time (seconds): 1.16
+        Percent of CPU this job got: 54%
+        Elapsed (wall clock) time (h:mm:ss or m:ss): 0:04.36
         Average shared text size (kbytes): 0
         Average unshared data size (kbytes): 0
         Average stack size (kbytes): 0
         Average total size (kbytes): 0
-        Maximum resident set size (kbytes): 3328
+        Maximum resident set size (kbytes): 3200
         Average resident set size (kbytes): 0
-        Major (requiring I/O) page faults: 5
-        Minor (reclaiming a frame) page faults: 135
-        Voluntary context switches: 5
-        Involuntary context switches: 0
+        Major (requiring I/O) page faults: 6
+        Minor (reclaiming a frame) page faults: 133
+        Voluntary context switches: 242
+        Involuntary context switches: 23792
         Swaps: 0
-        File system inputs: 264
+        File system inputs: 336
         File system outputs: 0
         Socket messages sent: 0
         Socket messages received: 0
         Signals delivered: 0
         Page size (bytes): 4096
         Exit status: 0
-
 
 
 Performance counter stats for './main':
 
-              2,97 msec task-clock                       #    0,731 CPUs utilized
-                 2      context-switches                 #  673,774 /sec
-                 0      cpu-migrations                   #    0,000 /sec
-               124      page-faults                      #   41,774 K/sec
+          3602,61 msec task-clock                       #    0,905 CPUs utilized
+             5886      context-switches                 #    1,634 K/sec
+                 1      cpu-migrations                   #    0,278 /sec
+               126      page-faults                      #   34,975 /sec
    <not supported>      cycles
    <not supported>      instructions
    <not supported>      branches
@@ -64,20 +63,19 @@ Performance counter stats for './main':
    <not supported>      LLC-loads
    <not supported>      LLC-load-misses
 
-       0,004061407 seconds time elapsed
+       3,980231237 seconds time elapsed
 
-       0,000000000 seconds user
-       0,003671000 seconds sys
-
+       1,802316000 seconds user
+       1,762086000 seconds sys
 
 
 
 Performance counter stats for './optimization':
 
-              2,62 msec task-clock                       #    0,810 CPUs utilized
-                 0      context-switches                 #    0,000 /sec
-                 0      cpu-migrations                   #    0,000 /sec
-               125      page-faults                      #   47,648 K/sec
+          2406,78 msec task-clock                       #    0,713 CPUs utilized
+            16760      context-switches                 #    6,964 K/sec
+                 8      cpu-migrations                   #    3,324 /sec
+               125      page-faults                      #   51,937 /sec
    <not supported>      cycles
    <not supported>      instructions
    <not supported>      branches
@@ -87,43 +85,71 @@ Performance counter stats for './optimization':
    <not supported>      LLC-loads
    <not supported>      LLC-load-misses
 
-       0,003236832 seconds time elapsed
+       3,374873386 seconds time elapsed
 
-       0,003378000 seconds user
-       0,000000000 seconds sys
+       1,271737000 seconds user
+       1,137185000 seconds sys
 
 
-Samples: 39  of event 'cpu-clock:pppH', Event count (approx.): 9750000
+Samples: 13K of event 'cpu-clock:pppH', Event count (approx.): 3370250000
 Overhead  Command  Shared Object         Symbol
-  15,38%  main     ld-linux-x86-64.so.2  [.] intel_check_word.constprop.0                                                                                                                                                                     ▒
-  12,82%  main     ld-linux-x86-64.so.2  [.] handle_intel.constprop.0                                                                                                                                                                         ▒
-   7,69%  main     [unknown]             [k] 0xffffffff96aadc71                                                                                                                                                                               ▒
-   7,69%  main     [unknown]             [k] 0xffffffff96aaf26e                                                                                                                                                                               ◆
-   5,13%  main     ld-linux-x86-64.so.2  [.] get_common_cache_info.constprop.0                                                                                                                                                                ▒
-   5,13%  main     [unknown]             [k] 0xffffffff95ac917e                                                                                                                                                                               ▒
-   5,13%  main     [unknown]             [k] 0xffffffffc083fee9                                                                                                                                                                               ▒
-   2,56%  main     ld-linux-x86-64.so.2  [.] _dl_map_object_from_fd                                                                                                                                                                           ▒
-   2,56%  main     ld-linux-x86-64.so.2  [.] _dl_relocate_object                                                                                                                                                                              ▒
-   2,56%  main     ld-linux-x86-64.so.2  [.] do_lookup_x                                                                                                                                                                                      ▒
-   2,56%  main     ld-linux-x86-64.so.2  [.] get_common_indices.constprop.0                                                                                                                                                                   ▒
-   2,56%  main     ld-linux-x86-64.so.2  [.] init_cpu_features.constprop.0                                                                                                                                                                    ▒
-   2,56%  main     libc.so.6             [.] _int_malloc                                                                                                                                                                                      ▒
-   2,56%  main     [unknown]             [k] 0xffffffff95b125c8                                                                                                                                                                               ▒
-   2,56%  main     [unknown]             [k] 0xffffffff95b34b0a                                                                                                                                                                               ▒
-   2,56%  main     [unknown]             [k] 0xffffffff95bc5881                                                                                                                                                                               ▒
-   2,56%  main     [unknown]             [k] 0xffffffff95d3b845                                                                                                                                                                               ▒
-   2,56%  main     [unknown]             [k] 0xffffffff95d5fc94                                                                                                                                                                               ▒
-   2,56%  main     [unknown]             [k] 0xffffffff95d97e1d                                                                                                                                                                               ▒
-   2,56%  main     [unknown]             [k] 0xffffffff95e30959                                                                                                                                                                               ▒
-   2,56%  main     [unknown]             [k] 0xffffffff960667f6                                                                                                                                                                               ▒
-   2,56%  main     [unknown]             [k] 0xffffffff96129620                                                                                                                                                                               ▒
-   2,56%  main     [unknown]             [k] 0xffffffff96274ca4
+  55,20%  main     main                  [.] GeometricalProg                                                                                                                                                                                                                                              ◆
+  37,49%  main     [unknown]             [k] 0xffffffffb99125c8                                                                                                                                                                                                                                           ▒
+   0,59%  main     [unknown]             [k] 0xffffffffba8adc71                                                                                                                                                                                                                                           ▒
+   0,50%  main     [unknown]             [k] 0xffffffffba8af26e                                                                                                                                                                                                                                           ▒
+   0,22%  main     libc.so.6             [.] __GI___libc_write                                                                                                                                                                                                                                            ▒
+   0,16%  main     libc.so.6             [.] __memcpy_ssse3                                                                                                                                                                                                                                               ▒
+   0,14%  main     libstdc++.so.6.0.30   [.] std::locale::id::_M_id                                                                                                                                                                                                                                       ▒
+   0,13%  main     libstdc++.so.6.0.30   [.] std::ostream::flush                                                                                                                                                                                                                                          ▒
+   0,13%  main     [unknown]             [k] 0xffffffffba225ba0                                                                                                                                                                                                                                           ▒
+   0,13%  main     libc.so.6             [.] _IO_file_write@@GLIBC_2.2.5                                                                                                                                                                                                                                  ▒
+   0,13%  main     libstdc++.so.6.0.30   [.] std::ostream::_M_insert<long>                                                                                                                                                                                                                                ▒
+   0,12%  main     libc.so.6             [.] _IO_file_xsputn@@GLIBC_2.2.5                                                                                                                                                                                                                                 ▒
+   0,12%  main     libc.so.6             [.] _IO_fwrite                                                                                                                                                                                                                                                   ▒
+   0,12%  main     libstdc++.so.6.0.30   [.] std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>                                                                                                                                                            ▒
+   0,10%  main     libc.so.6             [.] __strlen_sse2                                                                                                                                                                                                                                                ▒
+   0,10%  main     libstdc++.so.6.0.30   [.] std::ostream::put                                                                                                                                                                                                                                            ▒
+   0,10%  main     [unknown]             [k] 0xffffffffb9caaa99                                                                                                                                                                                                                                           ▒
+   0,10%  main     libc.so.6             [.] _IO_fflush                                                                                                                                                                                                                                                   ▒
+   0,10%  main     [unknown]             [k] 0xffffffffb9ed3b62                                                                                                                                                                                                                                           ▒
+   0,09%  main     libstdc++.so.6.0.30   [.] std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::do_put                                                                                                                                                                         ▒
+   0,09%  main     libstdc++.so.6.0.30   [.] std::ostream::operator<<                                                                                                                                                                                                                                     ▒
+   0,09%  main     [unknown]             [k] 0xffffffffba898b70                                                                                                                                                                                                                                           ▒
+   0,08%  main     libc.so.6             [.] __mempcpy_ssse3                                                                                                                                                                                                                                              ▒
+   0,08%  main     [unknown]             [k] 0xffffffffb99c5881                                                                                                                                                                                                                                           ▒
+   0,08%  main     [unknown]             [k] 0xffffffffba22c5e8                                                                                                                                                                                                                                           ▒
+   0,07%  main     libstdc++.so.6.0.30   [.] std::endl<char, std::char_traits<char> >                                                                                                                                                                                                                     ▒
+   0,07%  main     [unknown]             [k] 0xffffffffba21f950                                                                                                                                                                                                                                           ▒
+   0,07%  main     [unknown]             [k] 0xffffffffba221b7c
 
 
-Samples: 13  of event 'cpu-clock:pppH', Event count (approx.): 3250000
+Samples: 15K of event 'cpu-clock:pppH', Event count (approx.): 3781500000
 Overhead  Command       Shared Object         Symbol
-  69,23%  optimization  [unknown]             [k] 0xffffffff95b34b0a                                                                                                                                                                          ▒
-   7,69%  optimization  ld-linux-x86-64.so.2  [.] intel_check_word.constprop.0                                                                                                                                                                ▒
-   7,69%  optimization  [unknown]             [k] 0xffffffff95aa959a                                                                                                                                                                          ▒
-   7,69%  optimization  [unknown]             [k] 0xffffffff95dbeef6                                                                                                                                                                          ▒
-   7,69%  optimization  [unknown]             [k] 0xffffffff960d3b58
+  66,25%  optimization  [unknown]             [k] 0xffffffffb99125c8                                                                                                                                                                                                                                      ◆
+  28,78%  optimization  optimization          [.] GeometricalProg                                                                                                                                                                                                                                         ▒
+   1,77%  optimization  [unknown]             [k] 0xffffffffba8af26e                                                                                                                                                                                                                                      ▒
+   0,50%  optimization  [unknown]             [k] 0xffffffffba8adc71                                                                                                                                                                                                                                      ▒
+   0,27%  optimization  [unknown]             [k] 0xffffffffb9934b0a                                                                                                                                                                                                                                      ▒
+   0,17%  optimization  libc.so.6             [.] __GI___libc_write                                                                                                                                                                                                                                       ▒
+   0,09%  optimization  libc.so.6             [.] _IO_file_write@@GLIBC_2.2.5                                                                                                                                                                                                                             ▒
+   0,09%  optimization  libc.so.6             [.] _IO_fwrite                                                                                                                                                                                                                                              ▒
+   0,07%  optimization  libstdc++.so.6.0.30   [.] std::ostream::_M_insert<long>                                                                                                                                                                                                                           ▒
+   0,07%  optimization  [unknown]             [k] 0xffffffffba898b70                                                                                                                                                                                                                                      ▒
+   0,05%  optimization  libc.so.6             [.] _IO_file_xsputn@@GLIBC_2.2.5                                                                                                                                                                                                                            ▒
+   0,05%  optimization  libstdc++.so.6.0.30   [.] std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>                                                                                                                                                       ▒
+   0,05%  optimization  libstdc++.so.6.0.30   [.] std::ostream::flush                                                                                                                                                                                                                                     ▒
+   0,05%  optimization  libstdc++.so.6.0.30   [.] std::ostream::put                                                                                                                                                                                                                                       ▒
+   0,05%  optimization  [unknown]             [k] 0xffffffffba8a6f75                                                                                                                                                                                                                                      ▒
+   0,04%  optimization  libc.so.6             [.] _IO_do_write@@GLIBC_2.2.5                                                                                                                                                                                                                               ▒
+   0,04%  optimization  libstdc++.so.6.0.30   [.] std::ostream::operator<<                                                                                                                                                                                                                                ▒
+   0,04%  optimization  [unknown]             [k] 0xffffffffb99c5881                                                                                                                                                                                                                                      ▒
+   0,03%  optimization  libstdc++.so.6.0.30   [.] __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::sync                                                                                                                                                                                      ▒
+   0,03%  optimization  [unknown]             [k] 0xffffffffb9ed3b62                                                                                                                                                                                                                                      ▒
+   0,03%  optimization  [unknown]             [k] 0xffffffffba22655c                                                                                                                                                                                                                                      ▒
+   0,03%  optimization  [unknown]             [k] 0xffffffffba8a8594                                                                                                                                                                                                                                      ▒
+   0,03%  optimization  libc.so.6             [.] _IO_file_overflow@@GLIBC_2.2.5                                                                                                                                                                                                                          ▒
+   0,03%  optimization  libc.so.6             [.] __memcpy_ssse3                                                                                                                                                                                                                                          ▒
+   0,03%  optimization  libstdc++.so.6.0.30   [.] std::ostream::sentry::sentry                                                                                                                                                                                                                            ▒
+   0,03%  optimization  [unknown]             [k] 0xffffffffb9c7e5b9                                                                                                                                                                                                                                      ▒
+   0,03%  optimization  [unknown]             [k] 0xffffffffb9caaa99                                                                                                                                                                                                                                      ▒
+   0,03%  optimization  [unknown]             [k] 0xffffffffba225ba0
